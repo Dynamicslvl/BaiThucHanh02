@@ -1,4 +1,5 @@
 # BaiThucHanh02
+Nhóm BTL 06
  
 Mô tả cách làm:
 - Tạo các Product: Product.java, Controller: Controller, repository: ProductRepository
