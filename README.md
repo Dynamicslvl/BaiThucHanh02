@@ -6,5 +6,5 @@ Mô tả cách làm:
 - Chỉnh sửa giao diện
 
 Phân công công việc:
-- Vương Đình Doanh: giao diện (các lớp html)
-- Trần Thị Hằng: controller(chức năng thêm, sửa, hiển thị, xóa)
+- Vương Đình Doanh - B19DCCN117: giao diện (các lớp html)
+- Trần Thị Hằng - B19DCCN226: controller(chức năng thêm, sửa, hiển thị, xóa)
