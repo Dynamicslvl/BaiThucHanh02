@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delete</title>
+</head>
+<body>
+<div class="container">
+  <h1>Are you sure you want to delete this product?</h1>
+  <form class="product-table" th:action="@{/deletePost/}" method="post">
+    <div class="product-row">
+      <span>Product code: </span>
+      <span class="product-code" th:text="${product.code}"></span>
+    </div>
+    <div class="product-row">
+      <span>Product description: </span>
+      <span class="product-description"th:text="${product.description}"></span>
+    </div>
+    <div class="product-row">
+      <span>Product price: </span>
+      <span class="product-price"th:text="${product.price}"></span>
+    </div>
+
+    <div class="product-btn">
+      <input class="btn" id="submit" type="submit" value="Yes">
+      <button class="btn">No</button>
+    </div>
+  </form>
+</div>
+</body>
+</html>

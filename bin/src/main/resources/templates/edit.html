@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns=http://www.w3.org/1999/xhtml
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit</title>
+</head>
+<body>
+<style>
+    .container {
+        margin-left: 16px;
+    }
+
+    h1 {
+        margin-bottom: 10px;
+    }
+
+    h4 {
+        font-style: italic;
+        color: #666;
+        font-weight: 400;
+    }
+
+    .product-row {
+        margin-bottom: 10px;
+    }
+
+    .product-row span {
+        display: inline-block;
+        min-width: 130px;
+    }
+
+    .product-row input[type="text"] {
+        line-height: 1.6;
+        padding: 2px 6px;
+        outline: none;
+        width: 400px;
+    }
+
+    .product-btn {
+        margin-top: 20px;
+    }
+
+    .product-btn .btn {
+        margin-right: 10px;
+        padding: 4px 10px;
+    }
+</style>
+<div class="container">
+    <h1>Product</h1>
+    <h4>You must enter the description for the product!</h4>
+
+    <form class="product-table" th:object="${productEdit}" th:action="@{/update}" method="post">
+        <div class="product-row">
+            <span>Product code: </span>
+            <input type="text" th:field="*{code}" readonly="readonly" />
+        </div>
+        <div class="product-row">
+            <span>Product description: </span>
+            <input type="text" th:field="*{description}" />
+        </div>
+        <div class="product-row">
+            <span>Product price: </span>
+            <input type="text" th:field="*{price}"/>
+        </div>
+        <div class="product-btn">
+            <input class="btn" id="submit" type="submit" value="Update Product">
+            <a th:href="@{/products}"><button class="btn">View Product</button></a>
+        </div>
+    </form>
+</div>
+</body>
+</html>
